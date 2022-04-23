@@ -26,10 +26,10 @@ int main(void)
 
             for(i=0;i<6;i++){         //o seguinte argumento liga as portas de 0 a 5 uma de cada vez
                 PORTB = PORTB^(0x01<<i);
-                _delay_ms(200);
+                _delay_ms(500);
             }
             for(b=6;b>=0;b--){       //o seguinte argumento desliga as portas de 0 a 5 uma de cada vez
-                PORTB = PORTB ^(0xFF>>b);
+                PORTB = PORTB ^(0x00>>b);
                 _delay_ms(500);
             }
         }
