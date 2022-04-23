@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1650547227 source:c:\users\hyan\documents\projetos c\test02\fuse.c
+	<avr/io.h>
+
+1650715692 source:c:\users\hyan\documents\projetos c\test02\main.c
+	<avr/io.h>
+	<util/delay.h>
+

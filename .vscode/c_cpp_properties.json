@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "AVR",
+            "intelliSenseMode": "${default}",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "compilerPath": "c:\\WinAVR-20100110\\bin\\avr-c++.exe",
+            "includePath": [],
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                "-DF_CPU=16000UL"
+            ]
+        }
+    ],
+    "version": 4
+}
