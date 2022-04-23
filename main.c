@@ -15,29 +15,23 @@ int main(void)
 
     PORTB = 0x00; // zerando o byte PORTB
     PORTD = 0x04; // colocando o bit 02 como pullup
-    int i;
-    int b;
-    char botao;
-    // Insert code
+    char i;
+    char b;
 
-    while(1){
 
-        if(( ~PIND ) & 0b00000100){   //a conexão deve estar em pull up para q quando o botao for precionado, a condicao seja verdadeira.
+    for(;;){
 
-            for(i=0;i<6;i++){         //o seguinte argumento liga as portas de 0 a 5 uma de cada vez
+        while (( ~PIND ) & 0b00000100){     //a conexão deve estar em pull up para q quando o botao for precionado, a condicao seja verdadeira.
+
+            for(i=0;i<6;i++){               // liga as portas de 0 a 5 uma de cada vez
                 PORTB = PORTB^(0x01<<i);
-                _delay_ms(500);
+                _delay_ms(100);
+
             }
-            for(b=6;b>=0;b--){       //o seguinte argumento desliga as portas de 0 a 5 uma de cada vez
+            for(b=6;b>=0;b--){              // desliga as portas de 0 a 5 uma de cada vez
                 PORTB = PORTB ^(0x00>>b);
-                _delay_ms(500);
+                _delay_ms(100);
             }
-        }
-
-
-        else{
-             PORTB = 0x00;
-
         }
 
 
